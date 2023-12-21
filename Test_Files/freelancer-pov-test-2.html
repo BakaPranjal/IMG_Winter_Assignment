@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Portal - Cinema Industry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .job-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .job-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            width: calc(33.33% - 20px);
+            box-sizing: border-box;
+        }
+
+        .job-filters {
+            margin-bottom: 20px;
+        }
+
+        select,
+        input {
+            margin-right: 10px;
+        }
+
+        .contact-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to Your Freelancer Portal</h1>
+    </header>
+
+    <section id="ongoing-jobs">
+        <h2>Ongoing Jobs</h2>
+        <ul class="job-list">
+            <li class="job-card">Job Title 1</li>
+            <li class="job-card">Job Title 2</li>
+            <!-- Add more ongoing jobs as needed -->
+        </ul>
+    </section>
+
+    <section id="available-jobs">
+        <h2>Available Jobs</h2>
+
+        <div class="job-filters">
+            <label for="job-profile">Job Profile:</label>
+            <select id="job-profile">
+                <option value="cinematographer">Cinematographer</option>
+                <option value="editor">Editor</option>
+                <!-- Add more job profiles as needed -->
+            </select>
+
+            <label for="paygrade">Pay Grade:</label>
+            <input type="text" id="paygrade" placeholder="Enter Pay Grade">
+
+            <label for="estimated-time">Estimated Time:</label>
+            <input type="text" id="estimated-time" placeholder="Enter Estimated Time">
+        </div>
+
+        <ul class="job-list">
+            <li class="job-card">Job Title 3</li>
+            <li class="job-card">Job Title 4</li>
+            <!-- Add more available jobs as needed -->
+        </ul>
+
+        <button onclick="location.href='job-page.html'">View All Jobs</button>
+    </section>
+
+    <section id="contact-form" class="contact-form">
+        <h2>Contact Form</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+</body>
+
+</html>

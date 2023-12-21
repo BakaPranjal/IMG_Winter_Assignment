@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Feed - Producer POV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Notification Feed - Producer POV</h2>
+    <ul id="notificationFeed">
+        <!-- Notifications will be dynamically added here -->
+    </ul>
+
+    <script>
+        // Simulated data (replace with real data from backend)
+        const notifications = [
+            { type: 'application', message: 'Freelancer ABC has applied for your job: Cinematographer for Film XYZ' },
+            { type: 'application', message: 'Freelancer XYZ has applied for your job: Video Editing for Project ABC' },
+            // Add more notifications as needed
+        ];
+
+        // Function to simulate updating the notification feed
+        function updateNotificationFeed() {
+            const notificationFeed = document.getElementById('notificationFeed');
+            notificationFeed.innerHTML = '';
+
+            notifications.forEach(notification => {
+                const listItem = document.createElement('li');
+                listItem.textContent = notification.message;
+                listItem.style.backgroundColor = getNotificationColor(notification.type);
+                notificationFeed.appendChild(listItem);
+            });
+        }
+
+        // Simulated function to get background color based on notification type
+        function getNotificationColor(type) {
+            switch (type) {
+                case 'application':
+                    return '#fde2e4'; // Light red for application requests
+                default:
+                    return '#fff'; // Default white
+            }
+        }
+
+        // Call the function to initially load the notification feed
+        updateNotificationFeed();
+    </script>
+
+</body>
+
+</html>

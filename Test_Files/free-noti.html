@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Feed - Freelancer POV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Notification Feed - Freelancer POV</h2>
+    <ul id="notificationFeed">
+        <!-- Notifications will be dynamically added here -->
+    </ul>
+
+    <script>
+        // Simulated data (replace with real data from backend)
+        const notifications = [
+            { type: 'update', message: 'New job added: Cinematographer for Film XYZ' },
+            { type: 'request', message: 'You have a job request for Video Editing from Producer ABC' },
+            { type: 'accept', message: 'Your job request for Cinematographer has been accepted by Producer XYZ' }
+            // Add more notifications as needed
+        ];
+
+        // Function to simulate updating the notification feed
+        function updateNotificationFeed() {
+            const notificationFeed = document.getElementById('notificationFeed');
+            notificationFeed.innerHTML = '';
+
+            notifications.forEach(notification => {
+                const listItem = document.createElement('li');
+                listItem.textContent = notification.message;
+                listItem.style.backgroundColor = getNotificationColor(notification.type);
+                notificationFeed.appendChild(listItem);
+            });
+        }
+
+        // Simulated function to get background color based on notification type
+        function getNotificationColor(type) {
+            switch (type) {
+                case 'update':
+                    return '#e6f7ff'; // Light blue for updates
+                case 'request':
+                    return '#fde2e4'; // Light red for requests
+                case 'accept':
+                    return '#e6ffe6'; // Light green for accepted requests
+                default:
+                    return '#fff'; // Default white
+            }
+        }
+
+        // Call the function to initially load the notification feed
+        updateNotificationFeed();
+    </script>
+
+</body>
+
+</html>

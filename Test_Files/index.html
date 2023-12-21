@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Job Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Sign Up / Log In</h2>
+    <form id="authForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="userType">I want to:</label>
+        <select id="userType" name="userType" required>
+            <option value="hire">Hire</option>
+            <option value="freelancer">Be a Freelancer</option>
+        </select>
+
+        <button type="button" onclick="authenticateUser()">Sign Up / Log In</button>
+    </form>
+
+    <script>
+        function authenticateUser() {
+            // Simulate authentication logic here (e.g., check credentials)
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const userType = document.getElementById('userType').value;
+
+            // Redirect to respective portals based on user type
+            if (userType === 'hire') {
+                window.location.href = 'producer-portal.html';
+            } else {
+                window.location.href = 'freelancer-portal.html';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

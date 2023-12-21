@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producer Profile - Cinema Industry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .personal-info,
+        .jobs-offered,
+        .contact-details {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .back-button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Producer Profile</h1>
+    </header>
+
+    <section class="personal-info">
+        <h2>Personal Information</h2>
+        <img src="profile-picture.jpg" alt="Profile Picture">
+        <p><strong>Name:</strong> Producer Name</p>
+    </section>
+
+    <section class="jobs-offered">
+        <h2>Jobs Offered</h2>
+        <ul>
+            <li>Job Title 1</li>
+            <li>Job Title 2</li>
+            <!-- Add more jobs offered as needed -->
+        </ul>
+    </section>
+
+    <section class="contact-details">
+        <h2>Contact Details</h2>
+        <p><strong>Phone Number:</strong> +1234567890</p>
+        <p><strong>Email:</strong> producer@email.com</p>
+    </section>
+
+    <button class="back-button" onclick="goBack()">Back to Producer Portal</button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+</body>
+
+</html>
