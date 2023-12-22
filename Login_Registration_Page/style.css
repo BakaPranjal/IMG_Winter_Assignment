@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-
+@font-face {
+    font-family: 'Limelight';
+    src: url('Logo\retrocraft-hub-brand-zip-file\fonts\Limelight Regular.ttf') format('truetype');
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', 'Verve', 'Times New Roman', Times, serif;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* filter: invert(100%); */
     /* background-color: black; */
 }
@@ -35,7 +38,7 @@ body {
     height: auto;
     width: 175px;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
-    filter: drop-shadow(0 0  10px rgba(173, 161, 107, 0.6));
+    /* filter: drop-shadow(0 0  10px rgba(173, 161, 107, 0.6)); */
 }
 .bg {
     /* content: ""; */
@@ -76,7 +79,7 @@ body {
 .wrapper {
     position: relative;
     width: 400px;
-    height: 440px;
+    height: 580px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .5);
     border-radius: 20px;
@@ -91,28 +94,28 @@ body {
 }
 
 .wrapper.active {
-    height: 580px;
+    height: 440px;
     /* width: calc((400/440)*580); */
     width: 450px;
 }
 
-.wrapper .form-box.login {
+.wrapper .form-box.register {
     transition: transform .18s ease;
     transform: translateX(0);
 }
 
-.wrapper.active .form-box.login {
+.wrapper.active .form-box.register {
     transition: none;
     transform: translateX(-450px);
 }
 
-.wrapper .form-box.register {
+.wrapper .form-box.login {
     position: absolute;
     transition: none;
     transform: translateX(450px);
 }
 
-.wrapper.active .form-box.register {
+.wrapper.active .form-box.login {
     transition: transform .18s ease;
     transform: translateX(0);
 }
@@ -140,7 +143,7 @@ body {
 }
 
 .form-box h2 {
-    font-family: 'Verve', 'Times New Roman', Times, serif;
+    font-family: 'Limelight', 'Times New Roman', Times, serif;
     font-size: 2em;
     color: #162938;
     text-align: center;
