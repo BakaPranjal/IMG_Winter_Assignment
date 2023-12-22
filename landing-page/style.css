@@ -152,14 +152,9 @@ body {
     text-shadow: 0 0 10px rgb(117, 117, 117);
     font-size: 2.5rem;
     /* filter: grayscale(); */
-    border: 2px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* border: 2px solid white; */
     color: #fff;
 }
-
-
 
 .shadow {
     position: relative;
