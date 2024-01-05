@@ -99,6 +99,7 @@ body {
 }
 
 .logo-title h1 {
+    user-select: none;
     font-family: 'Limelight', 'Times New Roman', Times, serif;
     color: #5D2510;
     padding: 5px;
@@ -280,6 +281,7 @@ body {
 }
 
 .join {
+    user-select: none;
     position: relative;
     text-align: center;
     /* top: -50px; */
